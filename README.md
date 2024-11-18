@@ -1,6 +1,11 @@
 ### 环境配置
+    conda create -n videoprocessing python=3.9
+    conda activate videoprocessing
+
     pip install -r requirements.txt
 
+另外需要下载Anylabeling.exe
+下载地址 : https://github.com/vietanhdev/anylabeling
 ### 程序演示
 运行程序，将显示如下界面：
 <div style="text-align: center;">
