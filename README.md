@@ -1,3 +1,6 @@
+### 环境配置
+    pip install -r requirements.txt
+
 ### 程序演示
 运行程序，将显示如下界面：
 <div style="text-align: center;">
