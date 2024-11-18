@@ -1,0 +1,7 @@
+input_img_path: 'origin_img/'
+output_video_path: 'enhanced_video/'
+output_img_path: 'enhanced_img/'
+hand_result_path: 'hand_result/'
+hand_result_img_path: 'hand_result_img/'
+final_video_path: 'final_video/'
+FPS: 25
