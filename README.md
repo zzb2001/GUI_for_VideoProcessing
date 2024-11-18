@@ -51,10 +51,15 @@
 </div>
 
 origin_img 为原始视频对应图片的路径
+
 enhanced_video 为处理后的视频的路径
+
 enhanced_img 为处理后的视频对应图片的路径
+
 hand_result 为手工标注结果（json）的路径
+
 hand_result_img 为手工标注图片的路径
+
 final_video 为手工标注与算法结果合成的视频路径
 
 算法部分需要提供原始视频每一帧的图片，处理后的视频及对应的图片。
@@ -72,5 +77,7 @@ final_video 为手工标注与算法结果合成的视频路径
 需要用到的参数可通过parameters传递(line 210)，可能用到的参数有：
 
 filename : 输入视频的绝对路径
+
 self.input_path : 输入视频的相对路径
+
 self.input_capture : 输入视频
