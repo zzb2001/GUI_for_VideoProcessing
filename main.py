@@ -15,6 +15,13 @@ from PIL import Image, ImageDraw
 with open('config.yaml', 'r') as file:
     config = yaml.safe_load(file)
 
+if not os.path.exists(config['hand_result_path']):
+    os.makedirs(config['hand_result_path'])
+if not os.path.exists(config['hand_result_img_path']):
+    os.makedirs(config['hand_result_img_path'])
+if not os.path.exists(config['final_video_path']):
+    os.makedirs(config['final_video_path'])
+
 uiLoader = QUiLoader()
 
 
