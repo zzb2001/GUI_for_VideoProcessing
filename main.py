@@ -52,7 +52,7 @@ class HandThread(QThread):
     def run(self):
         try:
             # subprocess.run(['AnyLabeling', '1.png', '--output', 'result', '--autosave'])
-            subprocess.run(['AnyLabeling', self.input_path, '--output', self.file_path])
+            subprocess.run(['anylabeling', self.input_path, '--output', self.file_path])
 
             image = Image.open(self.input_path)
             draw = ImageDraw.Draw(image)
@@ -88,8 +88,8 @@ class IntegrationThread(QThread):
 
     def run(self):
         try:
-            e_imgs = os.listdir(self.enhanced_img_path)
-            m_imgs = os.listdir(self.hand_marked_img_path)
+            e_imgs =  sorted(os.listdir(self.enhanced_img_path))
+            m_imgs =  sorted(os.listdir(self.hand_marked_img_path))
 
             sample_image = cv2.imread(os.path.join(self.enhanced_img_path, e_imgs[0]))
             height, width, layers = sample_image.shape
@@ -355,7 +355,7 @@ class MainWindow:
 
     def get_sotred_result(self):
         try:
-            self.sorted_results = os.listdir(config['output_img_path'] + self.filename_without_extension)
+            self.sorted_results =  sorted(os.listdir(config['output_img_path'] + self.filename_without_extension))
             self.origin_img = os.listdir(config['input_img_path'] + self.filename_without_extension)
             self.current_page = 0
             self.ui.sum_label.setText(f'图片总数 : {len(self.sorted_results)}')
